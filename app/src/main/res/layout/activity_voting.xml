@@ -4,49 +4,40 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/background_main"
+    android:backgroundTint="#b2b2b2"
+    android:backgroundTintMode="screen">
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/header512"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="8dp">
+        android:layout_width="394dp"
+        android:layout_height="94dp"
+
+        android:background="@drawable/event_header_bg"
+        tools:layout_editor_absoluteX="-6dp"
+        tools:layout_editor_absoluteY="-4dp">
 
         <TextView
             android:id="@+id/votingLabel"
-            android:layout_width="226dp"
+            android:layout_width="262dp"
             android:layout_height="34dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="38dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="30dp"
             android:text="PUT YOUR VOTES"
+            android:textAlignment="center"
             android:textColor="@color/PrimaryColor"
-            android:textFontWeight="800"
-            android:textSize="24sp"
+            android:textSize="28sp"
             android:textStyle="bold"
             app:fontFamily="casual"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.03" />
-
-        <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="64dp"
-            android:layout_height="61dp"
-            android:layout_marginTop="28dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="24dp"
-            android:background="@drawable/recording_button"
-            android:scaleType="fitCenter"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />
+
     </android.support.constraint.ConstraintLayout>
 
 
@@ -55,5 +46,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    <android.support.v7.widget.AppCompatImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="64dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/recording_button_free"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.969" />
 
 </android.support.constraint.ConstraintLayout>

@@ -22,17 +22,17 @@ public class VotingActivity extends AppCompatActivity {
                 new VotingList(
                         1,
                         84,
-                        "Blur Uncle",
+                        "Blur Sotong",
                         "Andre HL",
-                        (R.drawable.ic_launcher_background)
+                        (R.drawable.blursotong)
                 ));
         votingLists.add(
                 new VotingList(
                         2,
                         124,
-                        "Ordinary Uncle",
+                        "Kopi Uncle",
                         "Nikos Chan",
-                        (R.drawable.ic_launcher_background)
+                        (R.drawable.kopiuncle)
                 ));
 
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.votingRecyclerView);

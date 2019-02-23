@@ -5,6 +5,8 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
     FloatingActionButton fab;
@@ -13,11 +15,47 @@ public class MainActivity extends AppCompatActivity {
     FloatingActionButton vote;
     FloatingActionButton tasks;
     Boolean ismenuopen = false;
+    Button backgrounddefault;
+    Button backgroundone;
+    Button backgroundtwo;
+    Button backgroundthree;
+    ImageView backgroundimg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        backgroundimg = findViewById(R.id.backgroundimg);
+        backgrounddefault = findViewById(R.id.fabbackgrounddefault);
+        backgroundone = findViewById(R.id.fabbackgroundone);
+        backgroundtwo = findViewById(R.id.fabbackgroundtwo);
+        backgroundthree = findViewById(R.id.fabbackgroundthree);
+        backgrounddefault.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                backgroundimg.setImageResource(R.drawable.background_main);
+            }
+        });
+        backgroundone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                backgroundimg.setImageResource(R.drawable.background_one);
+            }
+        });
+        backgroundtwo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                backgroundimg.setImageResource(R.drawable.background_two);
+            }
+        });
+        backgroundthree.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                backgroundimg.setImageResource(R.drawable.background_three);
+            }
+        });
+
 
         fab = findViewById(R.id.fab);
         event = findViewById(R.id.fabevent);
