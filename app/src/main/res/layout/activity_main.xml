@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/hdb"
+    android:background="@drawable/background_main"
     tools:context=".MainActivity">
 
 
@@ -28,7 +28,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.05"
-        app:srcCompat="@drawable/eventwhite" />
+        app:srcCompat="@drawable/events64" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fableaderboard"
@@ -49,7 +49,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.05"
-        app:srcCompat="@drawable/leaderboardwhite" />
+        app:srcCompat="@drawable/leaderboard64" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fabvote"
@@ -70,7 +70,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.05"
-        app:srcCompat="@drawable/votewhite" />
+        app:srcCompat="@drawable/voting64" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fabtasks"
@@ -91,7 +91,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.05"
-        app:srcCompat="@drawable/taskswhite" />
+        app:srcCompat="@drawable/tasks64" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
@@ -111,5 +111,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.035"
         app:srcCompat="@drawable/menuwhite" />
+
 
 </android.support.constraint.ConstraintLayout>
