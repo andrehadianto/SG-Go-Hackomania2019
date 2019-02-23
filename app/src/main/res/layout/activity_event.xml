@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/event_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="EVENT NAME"
+            android:textSize="25dp"
+            android:layout_marginBottom="15dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="25dp">
+
+            <TextView
+                android:id="@+id/event_startdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="START DATE    "/>
+
+            <TextView
+                android:id="@+id/event_enddate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/event_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SAY THIS STUPID STATEMENT HURHUR"
+            android:textSize="17dp"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TASKS:"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:paddingBottom="15dp">
+
+            <CheckBox
+                android:id="@+id/event_task1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Record yourself!"/>
+
+            <CheckBox
+                android:id="@+id/event_task2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Vote for 3 people"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="REWARDS:"/>
+
+        <ImageView
+            android:id="@+id/char_thumbnail"
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"/>
+
+        <TextView
+            android:id="@+id/char_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="CHAR NAME"
+            android:textSize="18dp"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/char_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="CHAR DOES THIS AND THIS"/>
+
+    </LinearLayout>
+</ScrollView>

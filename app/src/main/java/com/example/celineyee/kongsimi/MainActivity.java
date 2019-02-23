@@ -37,13 +37,13 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-//        event.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intevent = new Intent(getApplicationContext(),EventsActivity.class);
-//                startActivity(intevent);
-//            }
-//        });
+        event.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent toEvents = new Intent(MainActivity.this,EventsActivity.class);
+                startActivity(toEvents);
+            }
+        });
 //
 //        leaderboard.setOnClickListener(new View.OnClickListener() {
 //            @Override
