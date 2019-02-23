@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="5dp">
@@ -14,8 +15,9 @@
             android:id="@+id/imageView"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:layout_margin="8dp"
             android:padding="4dp"
-            android:src="@drawable/ic_record_voice_over_black_24dp"/>
+            android:src="@drawable/ic_record_voice_over_black_24dp" />
 
         <TextView
             android:id="@+id/textViewTitle"
@@ -25,8 +27,8 @@
             android:layout_marginLeft="5dp"
             android:layout_marginTop="12dp"
             android:layout_toRightOf="@id/imageView"
-            android:text="Blur Sotong Uncle"
             android:fontFamily="casual"
+            android:text="Blur Sotong Uncle"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
             android:textColor="#000000" />
 
@@ -38,8 +40,8 @@
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
             android:layout_toRightOf="@id/imageView"
-            android:text="by Andre HL"
             android:fontFamily="casual"
+            android:text="by Andre HL"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
 
         <TextView
@@ -47,18 +49,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/textViewOwner"
-            android:layout_marginStart="5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
-            android:layout_toEndOf="@+id/imageView"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="33dp"
+            android:layout_marginTop="9dp"
+            android:layout_toEndOf="@+id/thumbs_up256"
             android:layout_toRightOf="@+id/imageView"
-            android:background="@color/colorPrimary"
+            android:fontFamily="casual"
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
             android:text="84"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
-            android:textStyle="bold"
-            android:fontFamily="casual" />
+            android:textColor="@color/PrimaryColor"
+            android:textStyle="bold" />
 
         <ImageButton
             android:id="@+id/upVoteButton"
@@ -71,6 +73,16 @@
             android:layout_marginLeft="192dp"
             android:layout_marginTop="-70dp"
             android:src="@drawable/ic_file_upload_black_24dp" />
+
+        <ImageView
+            android:id="@+id/thumbs_up256"
+            android:layout_width="17dp"
+            android:layout_height="16dp"
+            android:layout_below="@+id/textViewOwner"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="12dp"
+            android:layout_toEndOf="@+id/imageView"
+            app:srcCompat="@drawable/thumbs_up256" />
 
     </RelativeLayout>
 </android.support.v7.widget.CardView>
