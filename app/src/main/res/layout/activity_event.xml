@@ -23,14 +23,14 @@
         android:gravity="center"
         android:background="@drawable/ind_event_header"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="casual"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:text="REWARDS"/>
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:fontFamily="casual"-->
+        <!--android:textSize="18dp"-->
+        <!--android:textStyle="bold"-->
+        <!--android:gravity="center"-->
+        <!--android:text="REWARDS"/>-->
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -43,7 +43,7 @@
             android:layout_marginEnd="10dp"
             android:gravity="center"
             android:text="SAY THIS STUPID STATEMENT HURHUR"
-            android:textSize="20dp"
+            android:textSize="18dp"
             android:textStyle="bold|italic"
             android:fontFamily="casual"
             android:background="@drawable/speechbubble"/>
@@ -52,8 +52,8 @@
 
     <ImageView
         android:id="@+id/char_thumbnail"
-        android:layout_width="210dp"
-        android:layout_height="210dp"
+        android:layout_width="190dp"
+        android:layout_height="190dp"
         android:layout_gravity="center" />
 
     <TextView
@@ -62,7 +62,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="CHAR NAME"
-        android:textSize="20dp"
+        android:textSize="18dp"
         android:fontFamily="casual"
         android:textStyle="bold"/>
 
@@ -83,7 +83,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:textSize="20dp"
+        android:textSize="18dp"
         android:fontFamily="casual"
         android:textStyle="bold"
         android:text="DURATION"/>
