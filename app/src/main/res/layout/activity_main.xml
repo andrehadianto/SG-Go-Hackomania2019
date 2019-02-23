@@ -21,14 +21,18 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
-        app:fabSize="mini"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.953"
+        app:layout_constraintHorizontal_bias="0.976"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.05"
-        app:srcCompat="@drawable/events64" />
+        app:layout_constraintVertical_bias="0.035"
+        app:srcCompat="@drawable/eventnew"
+        app:maxImageSize="40dp"
+        app:elevation="0dp"
+        android:elevation="0dp"
+        app:borderWidth="0dp"
+        />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fableaderboard"
@@ -42,14 +46,17 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
-        app:fabSize="mini"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.953"
+        app:layout_constraintHorizontal_bias="0.976"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.05"
-        app:srcCompat="@drawable/leaderboard64" />
+        app:layout_constraintVertical_bias="0.035"
+        app:srcCompat="@drawable/leaderboardnew"
+        app:maxImageSize="40dp"
+        app:elevation="0dp"
+        android:elevation="0dp"
+        app:borderWidth="0dp"/>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fabvote"
@@ -63,14 +70,17 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
-        app:fabSize="mini"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.953"
+        app:layout_constraintHorizontal_bias="0.976"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.05"
-        app:srcCompat="@drawable/voting64" />
+        app:layout_constraintVertical_bias="0.035"
+        app:srcCompat="@drawable/votenew"
+        app:maxImageSize="40dp"
+        app:elevation="0dp"
+        android:elevation="0dp"
+        app:borderWidth="0dp"/>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fabtasks"
@@ -84,14 +94,17 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
-        app:fabSize="mini"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.953"
+        app:layout_constraintHorizontal_bias="0.976"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.05"
-        app:srcCompat="@drawable/tasks64" />
+        app:layout_constraintVertical_bias="0.035"
+        app:srcCompat="@drawable/tasksnew"
+        app:maxImageSize="40dp"
+        app:elevation="0dp"
+        android:elevation="0dp"
+        app:borderWidth="0dp"/>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
@@ -110,7 +123,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.035"
-        app:srcCompat="@drawable/menuwhite" />
+        app:srcCompat="@drawable/menunew"
+        app:maxImageSize="50dp"
+        app:elevation="0dp"
+        android:elevation="0dp"
+        app:borderWidth="0dp"/>
 
 
 </android.support.constraint.ConstraintLayout>
