@@ -8,15 +8,19 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        android:padding="8dp"
+        android:layout_height="110dp"
+        android:background="@drawable/header512"
+        android:padding="2dp">
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_margin="8dp"
-            android:padding="4dp"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:padding="8dp"
             android:src="@drawable/ic_record_voice_over_black_24dp" />
 
         <TextView
@@ -25,12 +29,13 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="5dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="14dp"
             android:layout_toRightOf="@id/imageView"
             android:fontFamily="casual"
             android:text="Blur Sotong Uncle"
+            android:textStyle="bold"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
-            android:textColor="#000000" />
+            android:textColor="@color/PrimaryColor" />
 
         <TextView
             android:id="@+id/textViewOwner"
@@ -42,6 +47,7 @@
             android:layout_toRightOf="@id/imageView"
             android:fontFamily="casual"
             android:text="by Andre HL"
+            android:textColor="@color/TertiaryColor"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
 
         <TextView
@@ -51,12 +57,14 @@
             android:layout_below="@id/textViewOwner"
             android:layout_marginStart="2dp"
             android:layout_marginLeft="33dp"
-            android:layout_marginTop="9dp"
+            android:layout_marginTop="5dp"
             android:layout_toEndOf="@+id/thumbs_up256"
             android:layout_toRightOf="@+id/imageView"
             android:fontFamily="casual"
             android:paddingLeft="15dp"
+            android:paddingTop="0dp"
             android:paddingRight="15dp"
+            android:paddingBottom="0dp"
             android:text="84"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
             android:textColor="@color/PrimaryColor"
@@ -69,20 +77,22 @@
             android:layout_below="@+id/textViewRating"
             android:layout_alignStart="@+id/textViewTitle"
             android:layout_alignLeft="@+id/textViewTitle"
-            android:layout_marginStart="192dp"
-            android:layout_marginLeft="192dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="125dp"
+            android:layout_marginLeft="125dp"
             android:layout_marginTop="-70dp"
-            android:src="@drawable/ic_file_upload_black_24dp" />
+            android:layout_marginEnd="58dp"
+            android:background="@drawable/vote_up512" />
 
         <ImageView
             android:id="@+id/thumbs_up256"
             android:layout_width="17dp"
             android:layout_height="16dp"
             android:layout_below="@+id/textViewOwner"
-            android:layout_marginStart="6dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="6dp"
             android:layout_toEndOf="@+id/imageView"
-            app:srcCompat="@drawable/thumbs_up256" />
+            app:srcCompat="@drawable/thumbs_up512" />
 
     </RelativeLayout>
 </android.support.v7.widget.CardView>
