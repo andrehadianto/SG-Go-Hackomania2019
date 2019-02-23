@@ -3,6 +3,7 @@ package com.example.celineyee.kongsimi;
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.media.MediaPlayer;
 import android.media.MediaRecorder;
@@ -24,6 +25,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 
@@ -183,28 +185,28 @@ public class RecordFragment extends DialogFragment {
                 captureButton.setVisibility(View.VISIBLE);
                 submitButton.setVisibility(View.INVISIBLE);
                 cancelButton.setVisibility(View.INVISIBLE);
-                playButton.setVisibility(View.GONE);
+                playButton.setVisibility(View.INVISIBLE);
                 break;
 
             case RECORD:
                 captureButton.setVisibility(View.VISIBLE);
                 submitButton.setVisibility(View.INVISIBLE);
                 cancelButton.setVisibility(View.INVISIBLE);
-                playButton.setVisibility(View.GONE);
+                playButton.setVisibility(View.INVISIBLE);
                 break;
 
             case REVIEW:
-                captureButton.setVisibility(View.GONE);
+                captureButton.setVisibility(View.INVISIBLE);
                 submitButton.setVisibility(View.VISIBLE);
                 cancelButton.setVisibility(View.VISIBLE);
                 playButton.setVisibility(View.VISIBLE);
                 break;
 
             case DONE:
-                captureButton.setVisibility(View.GONE);
+                captureButton.setVisibility(View.INVISIBLE);
                 submitButton.setVisibility(View.INVISIBLE);
                 cancelButton.setVisibility(View.INVISIBLE);
-                playButton.setVisibility(View.GONE);
+                playButton.setVisibility(View.INVISIBLE);
                 break;
         }
         getView().invalidate();
@@ -238,11 +240,7 @@ public class RecordFragment extends DialogFragment {
         if (!permissionToRecordAccepted) {
             // finish();
             Log.w(TAG, "onRequestPermissionsResult: Didn't get permission!");
-            if (recordCallback != null) {
-                recordCallback.onCancel();
-            } else {
-                dismiss();
-            }
+            dismiss();
         }
     }
 
@@ -297,8 +295,11 @@ public class RecordFragment extends DialogFragment {
         }
 
         if (recordFilePath != null) {
-            // FIXME Crashes at this line, can't delete an absolute path for some reason
-            getContext().deleteFile(recordFilePath);
+            File file = new File(recordFilePath);
+            boolean deleted = file.delete();
+            if (!deleted) {
+                Log.w(TAG, "deleteRecording: recordFilePath=\"" + recordFilePath +"\"not found");
+            }
         }
 
         state = State.START;
@@ -333,13 +334,12 @@ public class RecordFragment extends DialogFragment {
     }
 
     @Override
-    public void onResume() {
-        super.onResume();
-    }
+    public void onDismiss(DialogInterface dialog) {
+        super.onDismiss(dialog);
 
-    @Override
-    public void onPause() {
-        super.onPause();
+        if (recordCallback != null) {
+            recordCallback.onCancel();
+        }
     }
 
     /**
@@ -360,7 +360,8 @@ public class RecordFragment extends DialogFragment {
         void onComplete(String path);
 
         /**
-         * Called on user cancel of recording
+         * Called on user cancel of recording, like when the dialog is dismissed or permission is
+         * not granted
          */
         void onCancel();
     }

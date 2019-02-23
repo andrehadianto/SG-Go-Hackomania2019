@@ -14,7 +14,9 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:fontFamily="casual"
         android:text="@string/record_fragment_title"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,7 +28,9 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:fontFamily="casual"
         android:text="@string/record_fragment_prompt_default"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/recordTitleTextView" />
@@ -49,8 +53,8 @@
 
     <ImageButton
         android:id="@+id/cancelButton"
-        android:layout_width="108dp"
-        android:layout_height="75dp"
+        android:layout_width="91dp"
+        android:layout_height="80dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="4dp"
         android:scaleType="fitCenter"
@@ -61,11 +65,13 @@
     <ImageButton
         android:id="@+id/captureButton"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:src="@mipmap/ic_launcher_round"
+        android:scaleType="fitCenter"
+        android:src="@drawable/recording_button"
+        android:background="?android:selectableItemBackground"
         app:layout_constraintEnd_toStartOf="@+id/cancelButton"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/submitButton"
@@ -73,8 +79,8 @@
 
     <ImageButton
         android:id="@+id/playButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="90dp"
+        android:layout_height="80dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:src="@android:drawable/ic_media_play"
