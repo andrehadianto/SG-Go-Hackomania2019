@@ -24,7 +24,7 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".VotingActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".LeaderboardActivity"
+        <activity android:name=".TasksActivity"
             android:screenOrientation="portrait"/>
     </application>
 

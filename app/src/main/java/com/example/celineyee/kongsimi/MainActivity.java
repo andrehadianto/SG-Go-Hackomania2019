@@ -98,14 +98,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intvote);
             }
         });
-//
-//        tasks.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent inttasks = new Intent(getApplicationContext(),TasksActivity.class);
-//                startActivity(inttasks);
-//            }
-//        });
+
+        tasks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent inttasks = new Intent(getApplicationContext(),TasksActivity.class);
+                startActivity(inttasks);
+            }
+        });
 
     }
 
