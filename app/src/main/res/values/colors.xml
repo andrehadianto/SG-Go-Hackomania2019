@@ -7,5 +7,6 @@
     <color name="PrimaryColor">#543422</color>
     <color name="SecondaryColor">#ddc197</color>
     <color name="TertiaryColor">#a47b51</color>
+    <color name="dim">#3f4d4d4d</color>
 
 </resources>
