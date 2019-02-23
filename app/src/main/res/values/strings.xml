@@ -12,4 +12,5 @@
     <string name="record_fragment_title">Record yourself!!</string>
     <string name="record_fragment_prompt_default">DEFAULT PROMPT</string>
     <string name="title_activity_record_harness">RecordHarnessActivity</string>
+    <string name="title_activity_main2">main2</string>
 </resources>
