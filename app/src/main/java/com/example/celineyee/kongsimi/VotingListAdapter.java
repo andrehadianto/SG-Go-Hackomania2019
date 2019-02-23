@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -14,6 +15,9 @@ import java.util.List;
 public class VotingListAdapter extends RecyclerView.Adapter<VotingListAdapter.ViewHolder>{
     private Context mContext;
     private List<VotingList> mData;
+
+    ImageButton upVoteButton;
+
 
     public VotingListAdapter(Context mContext, List<VotingList> mData) {
         this.mContext = mContext;
@@ -30,12 +34,13 @@ public class VotingListAdapter extends RecyclerView.Adapter<VotingListAdapter.Vi
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        VotingList votingList = mData.get(position);
+        final VotingList votingList = mData.get(position);
 
         holder.textViewTitle.setText(votingList.getTitle());
         holder.textViewOwner.setText(votingList.getOwner());
         holder.textViewRating.setText(String.valueOf(votingList.getVotesNum()));
         holder.imageView.setImageDrawable(mContext.getResources().getDrawable(votingList.getImage()));
+
     }
 
     @Override

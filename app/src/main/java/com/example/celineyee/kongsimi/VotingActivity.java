@@ -39,5 +39,7 @@ public class VotingActivity extends AppCompatActivity {
         VotingListAdapter votingListAdapter = new VotingListAdapter(this,votingLists);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(votingListAdapter);
+
+
     }
 }
