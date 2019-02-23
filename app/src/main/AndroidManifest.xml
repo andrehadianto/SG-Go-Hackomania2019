@@ -22,10 +22,12 @@
         <activity android:name=".LeaderboardActivity"/>
         <activity android:name=".VotingActivity"/>
 
+        <!-- Must export this activity to enable direct run -->
         <activity
             android:name=".RecordHarnessActivity"
             android:label="@string/title_activity_record_harness"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"
+            android:exported="true"/>
     </application>
 
 </manifest>

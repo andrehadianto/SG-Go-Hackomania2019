@@ -169,6 +169,14 @@ public class RecordFragment extends DialogFragment {
         return view;
     }
 
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        state = State.START;
+        redrawByState();
+    }
+
     private void redrawByState() {
         switch (state) {
             case START:
@@ -199,7 +207,7 @@ public class RecordFragment extends DialogFragment {
                 playButton.setVisibility(View.GONE);
                 break;
         }
-//        getView().invalidate();
+        getView().invalidate();
     }
 
     @Override
