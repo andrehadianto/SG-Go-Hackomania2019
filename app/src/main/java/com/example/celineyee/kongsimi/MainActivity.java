@@ -6,8 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-
-
 public class MainActivity extends AppCompatActivity {
     FloatingActionButton fab;
     FloatingActionButton event;
@@ -46,22 +44,22 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(toEvents);
             }
         });
+
+        leaderboard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intleaderboard = new Intent(getApplicationContext(),LeaderboardActivity.class);
+                startActivity(intleaderboard);
+            }
+        });
 //
-//        leaderboard.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intleaderboard = new Intent(getApplicationContext(),LeaderboardActivity.class);
-//                startActivity(intleaderboard);
-//            }
-//        });
-//
-//        vote.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intvote = new Intent(getApplicationContext(),VotingActivity.class);
-//                startActivity(intvote);
-//            }
-//        });
+        vote.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intvote = new Intent(getApplicationContext(),VotingActivity.class);
+                startActivity(intvote);
+            }
+        });
 //
 //        tasks.setOnClickListener(new View.OnClickListener() {
 //            @Override
