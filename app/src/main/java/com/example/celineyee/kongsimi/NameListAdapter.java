@@ -13,6 +13,15 @@ import android.widget.TextView;
 public class NameListAdapter extends RecyclerView.Adapter<NameListAdapter.NameListViewHolder> {
     LayoutInflater mInflater;
     Context context;
+    private int[] imageList = new int[]{
+            R.drawable.profile1,
+            R.drawable.profile2,
+            R.drawable.profile3,
+            R.drawable.profile4,
+            R.drawable.profile5
+    };
+    private int[] scoreList = new int[]{93, 85, 80, 75, 77};
+    private String[] nameList = new String[]{"Andre", "Claire", "Nikos", "Celine", "TayTS"};
 
     public NameListAdapter(Context context) {
         mInflater = LayoutInflater.from(context);
@@ -29,9 +38,9 @@ public class NameListAdapter extends RecyclerView.Adapter<NameListAdapter.NameLi
     @Override
     public void onBindViewHolder(@NonNull NameListViewHolder nameListViewHolder, int i) {
         nameListViewHolder.textViewRank.setText(Integer.toString(i+1));
-        nameListViewHolder.imageViewProfile.setImageResource(R.drawable.profile3);
-        nameListViewHolder.textViewUsername.setText("User" + Integer.toString(i));
-        nameListViewHolder.textViewPoints.setText(Integer.toString(85));
+        nameListViewHolder.imageViewProfile.setImageResource(imageList[i]);
+        nameListViewHolder.textViewUsername.setText(nameList[i]);
+        nameListViewHolder.textViewPoints.setText(String.valueOf(scoreList[i]));
     }
 
     @Override
