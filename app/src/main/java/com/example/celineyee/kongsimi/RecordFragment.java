@@ -181,15 +181,15 @@ public class RecordFragment extends DialogFragment {
         switch (state) {
             case START:
                 captureButton.setVisibility(View.VISIBLE);
-                submitButton.setVisibility(View.GONE);
-                cancelButton.setVisibility(View.GONE);
+                submitButton.setVisibility(View.INVISIBLE);
+                cancelButton.setVisibility(View.INVISIBLE);
                 playButton.setVisibility(View.GONE);
                 break;
 
             case RECORD:
                 captureButton.setVisibility(View.VISIBLE);
-                submitButton.setVisibility(View.GONE);
-                cancelButton.setVisibility(View.GONE);
+                submitButton.setVisibility(View.INVISIBLE);
+                cancelButton.setVisibility(View.INVISIBLE);
                 playButton.setVisibility(View.GONE);
                 break;
 
@@ -202,8 +202,8 @@ public class RecordFragment extends DialogFragment {
 
             case DONE:
                 captureButton.setVisibility(View.GONE);
-                submitButton.setVisibility(View.GONE);
-                cancelButton.setVisibility(View.GONE);
+                submitButton.setVisibility(View.INVISIBLE);
+                cancelButton.setVisibility(View.INVISIBLE);
                 playButton.setVisibility(View.GONE);
                 break;
         }
@@ -297,6 +297,7 @@ public class RecordFragment extends DialogFragment {
         }
 
         if (recordFilePath != null) {
+            // FIXME Crashes at this line, can't delete an absolute path for some reason
             getContext().deleteFile(recordFilePath);
         }
 
