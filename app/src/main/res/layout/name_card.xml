@@ -32,7 +32,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:layout_weight="0.5"
-                android:fontFamily="@font/arvo_regular" />
+                android:fontFamily="casual" />
 
             <ImageView
                 android:id="@+id/cardViewProfileImage"
@@ -48,7 +48,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="8"
-                android:fontFamily="@font/arvo_regular" />
+                android:fontFamily="casual" />
 
             <TextView
                 android:id="@+id/cardViewPoints"
@@ -57,7 +57,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
-                android:fontFamily="@font/arvo_regular"/>
+                android:fontFamily="casual"/>
 
         </LinearLayout>
 

@@ -44,14 +44,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(toEvents);
             }
         });
-//
-//        leaderboard.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intleaderboard = new Intent(getApplicationContext(),LeaderboardActivity.class);
-//                startActivity(intleaderboard);
-//            }
-//        });
+
+        leaderboard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intleaderboard = new Intent(getApplicationContext(),LeaderboardActivity.class);
+                startActivity(intleaderboard);
+            }
+        });
 //
         vote.setOnClickListener(new View.OnClickListener() {
             @Override
