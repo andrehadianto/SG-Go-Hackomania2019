@@ -30,7 +30,7 @@ public class EventsActivity extends AppCompatActivity {
 
         eventsList = new ArrayList<>();
         eventsList.add(new Event("Daily Event", date2, "", "Paiseh, I super blur sotong one.", charBlurSotong));
-        eventsList.add(new Event("Weekly Event", date2, dateweek, "Ah bang, ai lim kopi or not?", charKopiUncle));
+        eventsList.add(new Event("Weekly Event", date2, dateweek, "Ah bang, lim kopi ai mai?", charKopiUncle));
         eventsList.add(new Event("Special Event - Hackomania", date1, date2, "Girl today so chio, going paktor ah?", charTaxiUncle));
 
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.events_recyclerview);
