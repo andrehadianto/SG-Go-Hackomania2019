@@ -19,6 +19,9 @@
         <activity android:name=".EventActivity" />
         <activity android:name=".LeaderboardActivity"/>
         <activity android:name=".VotingActivity"/>
+        <activity android:name=".LeaderboardActivity">
+
+        </activity>
     </application>
 
 </manifest>
