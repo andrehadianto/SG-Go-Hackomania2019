@@ -2,6 +2,8 @@ package com.example.celineyee.kongsimi;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.CheckBox;
@@ -9,7 +11,7 @@ import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class EventActivity extends AppCompatActivity {
+public class EventActivity extends AppCompatActivity implements RecordFragment.RecordCallback {
     private Event event;
     private Character character;
 
@@ -23,6 +25,19 @@ public class EventActivity extends AppCompatActivity {
     private ImageView image_char_thumbnail;
     private TextView text_char_name;
     private TextView text_char_desc;
+    private FloatingActionButton fabRecord;
+    RecordFragment recordFragment;
+
+    @Override
+    public void onComplete(String path) {
+        task1.setChecked(true);
+//        Toast.makeText(this, "Got a file! at " + path, Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void onCancel() {
+//        Toast.makeText(this, "Cancelled :(", Toast.LENGTH_SHORT).show();
+    }
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +64,7 @@ public class EventActivity extends AppCompatActivity {
         image_char_thumbnail = findViewById(R.id.char_thumbnail);
         text_char_name = findViewById(R.id.char_name);
         text_char_desc = findViewById(R.id.char_desc);
+        fabRecord = findViewById(R.id.recordButton);
 
         text_event_name.setText(event_name);
         text_event_startdate.setText(event_startdate);
@@ -81,19 +97,30 @@ public class EventActivity extends AppCompatActivity {
             }
         });
 
-        task2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(buttonView.isChecked())
-                {
-                    task2.setEnabled(false);
-                    buttonView.setButtonDrawable(R.drawable.tick);
-                }
-                if(!buttonView.isChecked())
-                {
-                    buttonView.setButtonDrawable(R.drawable.cross);
-                }
+//        task2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+//                if(buttonView.isChecked())
+//                {
+//                    task2.setEnabled(false);
+//                    buttonView.setButtonDrawable(R.drawable.tick);
+//                }
+//                if(!buttonView.isChecked())
+//                {
+//                    buttonView.setButtonDrawable(R.drawable.cross);
+//                }
+//
+//            }
+//        });
 
+        fabRecord.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                recordFragment = RecordFragment.newInstance(60000, "Record something");
+
+                FragmentManager fragmentManager = getSupportFragmentManager();
+
+                recordFragment.show(fragmentManager, "recordFragment");
             }
         });
     }

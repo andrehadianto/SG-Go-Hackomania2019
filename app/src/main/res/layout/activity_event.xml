@@ -143,25 +143,55 @@
             android:fontFamily="casual"
             android:textStyle="bold"
             android:text="TASKS"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="4">
 
-        <CheckBox
-            android:id="@+id/event_task1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16dp"
-            android:button="@drawable/cross"
-            android:fontFamily="casual"
-            android:text="Record yourself!"
-            android:checked="false" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="3">
+                <CheckBox
+                    android:id="@+id/event_task1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:button="@drawable/cross"
+                    android:fontFamily="casual"
+                    android:text="Record yourself!"
+                    android:checked="false" />
 
-        <CheckBox
-            android:id="@+id/event_task2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16dp"
-            android:button="@drawable/cross"
-            android:fontFamily="casual"
-            android:text="Vote for 3 people"
-            android:checked="false" />
+                <CheckBox
+                    android:id="@+id/event_task2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:button="@drawable/tick"
+                    android:fontFamily="casual"
+                    android:text="Vote for 3 people"
+                    android:checked="true"
+                    android:enabled="false"/>
+            </LinearLayout>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/recordButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/record128"
+                app:elevation="0dp"
+                android:elevation="0dp"
+                app:borderWidth="0dp"
+                app:maxImageSize="40dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+
+
+
     </LinearLayout>
+
 </LinearLayout>
