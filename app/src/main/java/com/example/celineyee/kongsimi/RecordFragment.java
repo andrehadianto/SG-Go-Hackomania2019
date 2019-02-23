@@ -59,6 +59,8 @@ public class RecordFragment extends DialogFragment {
     private String[] permissions = {Manifest.permission.RECORD_AUDIO};
     private static final int REQUEST_RECORD_AUDIO_PERMISSION = 200;
 
+    public static final int RECORD_BIT_RATE = 64000;
+    public static final int RECORD_SAMPLE_RATE = 24000;
 
     private TextView promptTextView;
     private ImageView captureButton;
@@ -150,8 +152,14 @@ public class RecordFragment extends DialogFragment {
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Tell parent Activity to grab the file and destroy me daddy
+                state = State.DONE;
+                redrawByState();
+
+                // Tell parent Activity to grab the file
                 recordCallback.onComplete(recordFilePath);
+
+                // Bye
+                dismiss();
             }
         });
 
@@ -262,6 +270,8 @@ public class RecordFragment extends DialogFragment {
         mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4);
         mediaRecorder.setOutputFile(recordFilePath);
         mediaRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AAC);
+        mediaRecorder.setAudioEncodingBitRate(RECORD_BIT_RATE);
+        mediaRecorder.setAudioSamplingRate(RECORD_SAMPLE_RATE);
         mediaRecorder.setMaxDuration(mMaxLen);
 
         try {
@@ -282,15 +292,31 @@ public class RecordFragment extends DialogFragment {
             throw new RuntimeException("Must be in record state to stop");
         }
 
-        mediaRecorder.stop();
-        mediaRecorder.release();
+        try {
+            mediaRecorder.stop();
+        } catch (RuntimeException e) {
+            // Eh, probably called this too fast
+            // Try delete and reset
+            deleteRecording(true);
+            mediaRecorder.reset();
+            return false;
+        } finally {
+            mediaRecorder.release();
+            // Give up fragment's reference to this instance of mediarecorder
+            mediaRecorder = null;
+        }
+
         state = State.REVIEW;
         redrawByState();
         return true;
     }
 
     private void deleteRecording() {
-        if (state != State.REVIEW) {
+        deleteRecording(false);
+    }
+
+    private void deleteRecording(boolean dammit) {
+        if (!dammit && state != State.REVIEW) {
             throw new RuntimeException("State error");
         }
 
@@ -337,7 +363,11 @@ public class RecordFragment extends DialogFragment {
     public void onDismiss(DialogInterface dialog) {
         super.onDismiss(dialog);
 
-        if (recordCallback != null) {
+        if (state == State.REVIEW) {
+            deleteRecording();
+        }
+
+        if (state != State.DONE && recordCallback != null) {
             recordCallback.onCancel();
         }
     }
@@ -361,7 +391,7 @@ public class RecordFragment extends DialogFragment {
 
         /**
          * Called on user cancel of recording, like when the dialog is dismissed or permission is
-         * not granted
+         * not granted. Not called when recording is successful.
          */
         void onCancel();
     }
