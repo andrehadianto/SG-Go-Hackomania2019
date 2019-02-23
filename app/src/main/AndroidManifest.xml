@@ -28,6 +28,9 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".TasksActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".TaskActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.PopUpTheme"/>
 
         <!-- Must export this activity to enable direct run -->
         <activity
