@@ -20,7 +20,7 @@ public class NameListAdapter extends RecyclerView.Adapter<NameListAdapter.NameLi
             R.drawable.profile4,
             R.drawable.profile5
     };
-    private int[] scoreList = new int[]{93, 85, 80, 75, 77};
+    private int[] scoreList = new int[]{93, 85, 80, 79, 77};
     private String[] nameList = new String[]{"Andre", "Claire", "Nikos", "Celine", "TayTS"};
 
     public NameListAdapter(Context context) {
