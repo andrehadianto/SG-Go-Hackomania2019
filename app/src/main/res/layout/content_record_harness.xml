@@ -8,4 +8,15 @@
     tools:context=".RecordHarnessActivity"
     tools:showIn="@layout/activity_record_harness">
 
+    <TextView
+        android:id="@+id/recordHarnessResultTextView"
+        android:layout_width="356dp"
+        android:layout_height="372dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="..."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>
