@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">KongSimi</string>
+    <string name="permission_request">Needs camera and audio permissions</string>
+    <string name="record">Record</string>
+    <string name="stop">Stop</string>
+    <string name="description_info">Info</string>
+    <string name="camera_error">No Camera2</string>
+    <string name="intro_message">Demo</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="record_fragment_title">Record yourself!!</string>
+    <string name="record_fragment_prompt_default">DEFAULT PROMPT</string>
+    <string name="title_activity_record_harness">RecordHarnessActivity</string>
 </resources>
