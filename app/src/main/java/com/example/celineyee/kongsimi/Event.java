@@ -1,4 +1,4 @@
 package com.example.celineyee.kongsimi;
 
-public class EventActivity {
+public class Event {
 }
