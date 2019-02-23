@@ -43,6 +43,7 @@
                 android:fontFamily="casual"/>
 
             <TextView
+                android:id="@+id/event_data_separator"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="    -    "

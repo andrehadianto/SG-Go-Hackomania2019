@@ -2,14 +2,11 @@ package com.example.celineyee.kongsimi;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.RecyclerView.ViewHolder;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -35,6 +32,9 @@ public class Events_RecyclerViewAdapter extends RecyclerView.Adapter<Events_Recy
         final Event event = mData.get(position);
         viewHolder.event_name.setText(event.getName());
         viewHolder.event_startdate.setText(event.getStartdate());
+        if (event.getEnddate().equals("")) {
+            viewHolder.event_date_separator.setVisibility(View.GONE);
+        }
         viewHolder.event_enddate.setText(event.getEnddate());
         viewHolder.event_cardview.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,6 +57,7 @@ public class Events_RecyclerViewAdapter extends RecyclerView.Adapter<Events_Recy
     public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView event_name;
         TextView event_startdate;
+        TextView event_date_separator;
         TextView event_enddate;
         CardView event_cardview;
 
@@ -64,6 +65,7 @@ public class Events_RecyclerViewAdapter extends RecyclerView.Adapter<Events_Recy
             super(itemView);
             event_name = (TextView) itemView.findViewById(R.id.events_name);
             event_startdate = (TextView) itemView.findViewById(R.id.events_startdate);
+            event_date_separator = (TextView) itemView.findViewById(R.id.event_data_separator);
             event_enddate = (TextView) itemView.findViewById(R.id.events_enddate);
             event_cardview = (CardView) itemView.findViewById(R.id.events_cardview);
         }
