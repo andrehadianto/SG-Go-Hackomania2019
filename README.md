@@ -26,7 +26,8 @@ However, players will be incentivised by the cute stickers and the drive to comp
 ![images/homepage](app/src/main/res/drawable/preview_1.png)
 ![images/populated_homepage_dropdown_menu](app/src/main/res/drawable/preview_2.png)
 ![images/kopi_uncle_event](app/src/main/res/drawable/preview_3.png)
-![images/tasks_sticker](app/src/main/res/drawable/preview_4.png)
+![images/tasks_random_encounter](app/src/main/res/drawable/preview_4.png)
+![images/tasks_sticker](app/src/main/res/drawable/preview_5.png)
 
 #### Sample Collectibles
 ![images/char_blursotong](app/src/main/res/drawable/blursotong.png)
