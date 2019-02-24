@@ -30,9 +30,9 @@ However, players will be incentivised by the cute stickers and the drive to comp
 ![images/tasks_sticker](app/src/main/res/drawable/preview_5.png)
 
 #### Sample Collectibles
-![images/char_blursotong](app/src/main/res/drawable/blursotong.png)
-![images/char_kopiuncle](app/src/main/res/drawable/kopiuncle.png)
-![images/char_taxiuncle](app/src/main/res/drawable/taxiuncle.png)
+![images/char_blursotong](app/src/main/res/drawable/preview_char1.png)
+![images/char_kopiuncle](app/src/main/res/drawable/preview_char2.png)
+![images/char_taxiuncle](app/src/main/res/drawable/preview_char3.png)
 <br/>
 ![images/sitcker_angkukueh](app/src/main/res/drawable/sticker_angkukueh.png)
 ![images/sitcker_icepops](app/src/main/res/drawable/sticker_icepops.png)
