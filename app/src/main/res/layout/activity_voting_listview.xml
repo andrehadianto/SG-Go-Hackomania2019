@@ -9,95 +9,84 @@
     android:elevation="0dp"
     app:cardElevation="0dp">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="140dp"
         android:background="@drawable/header512"
-        android:padding="2dp">
+        android:padding="2dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:weightSum="10">
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:padding="8dp"
+            android:layout_width="92dp"
+            android:layout_height="92dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="2"
             android:src="@drawable/ic_record_voice_over_black_24dp" />
 
-        <TextView
-            android:id="@+id/textViewTitle"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="20dp"
-            android:layout_toRightOf="@id/imageView"
-            android:fontFamily="casual"
-            android:text="Blur Sotong Uncle"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
-            android:textColor="@color/PrimaryColor"
-            android:textSize="18dp"
-            android:textStyle="bold" />
+            android:orientation="vertical"
+            android:layout_weight="8">
 
-        <TextView
-            android:id="@+id/textViewOwner"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/textViewTitle"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="0dp"
-            android:layout_toRightOf="@id/imageView"
-            android:fontFamily="casual"
-            android:text="by Andre HL"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
-            android:textColor="@color/PrimaryColor" />
+            <TextView
+                android:id="@+id/textViewTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:text="Blur Sotong Uncle"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="@color/PrimaryColor"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="left"/>
 
-        <TextView
-            android:id="@+id/textViewRating"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/textViewOwner"
-            android:layout_marginStart="2dp"
-            android:layout_marginLeft="33dp"
-            android:layout_marginTop="0dp"
-            android:layout_toEndOf="@+id/thumbs_up256"
-            android:layout_toRightOf="@+id/imageView"
-            android:fontFamily="casual"
-            android:paddingLeft="15dp"
-            android:paddingTop="0dp"
-            android:paddingRight="15dp"
-            android:paddingBottom="0dp"
-            android:text="84"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
-            android:textColor="@color/PrimaryColor"
-            android:textStyle="bold" />
+            <TextView
+                android:id="@+id/textViewOwner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:text="by Andre HL"
+                android:textSize="18sp"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="@color/PrimaryColor" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/thumbs_up256"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginEnd="5dp"
+                    app:srcCompat="@drawable/thumbs_up512" />
+                <TextView
+                    android:id="@+id/textViewRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="casual"
+                    android:textSize="18sp"
+                    android:text="84"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
+                    android:textColor="@color/PrimaryColor"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+            </LinearLayout>
+        </LinearLayout>
 
         <ImageButton
             android:id="@+id/upVoteButton"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_below="@+id/textViewRating"
-            android:layout_alignStart="@+id/textViewTitle"
-            android:layout_alignLeft="@+id/textViewTitle"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="125dp"
-            android:layout_marginLeft="125dp"
-            android:layout_marginTop="-70dp"
-            android:layout_marginEnd="58dp"
-            android:background="@drawable/vote_up512" />
+            android:background="@drawable/vote_up512"
+            android:layout_marginEnd="25dp"
+            android:layout_weight="2"/>
 
-        <ImageView
-            android:id="@+id/thumbs_up256"
-            android:layout_width="27dp"
-            android:layout_height="23dp"
-            android:layout_below="@+id/textViewOwner"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="2dp"
-            android:layout_toEndOf="@+id/imageView"
-            app:srcCompat="@drawable/thumbs_up512" />
-
-    </RelativeLayout>
+    </LinearLayout>
 </android.support.v7.widget.CardView>
 
