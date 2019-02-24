@@ -40,6 +40,7 @@ public class Events_RecyclerViewAdapter extends RecyclerView.Adapter<Events_Recy
             @Override
             public void onClick(View v) {
                 Intent toEvent = new Intent(mContext,EventActivity.class);
+                toEvent.putExtra("ID",event.getId());
                 toEvent.putExtra("NAME",event.getName());
                 toEvent.putExtra("STARTDATE",event.getStartdate());
                 toEvent.putExtra("ENDDATE",event.getEnddate());
