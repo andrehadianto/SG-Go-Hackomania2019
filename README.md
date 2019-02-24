@@ -23,21 +23,21 @@ anytime and anywhere. It is also a casual Idle game where players can play at th
 However, players will be incentivised by the cute stickers and the drive to complete the collection.
 
 ### Preview
-![images/homepage](https://github.com/andrehadianto/SG-Go-Hackomania2019/tree/master/app/src/main/res/drawable/preview_1.png)
-![images/populated_homepage_dropdown_menu](https://github.com/andrehadianto/SG-Go-Hackomania2019/tree/master/app/src/main/res/drawable/preview_2.png)
-![images/kopi_uncle_event](https://github.com/andrehadianto/SG-Go-Hackomania2019/tree/master/app/src/main/res/drawable/preview_3.png)
-![images/tasks_sticker](https://github.com/andrehadianto/SG-Go-Hackomania2019/tree/master/app/src/main/res/drawable/preview_4.png)
+![images/homepage](app/src/main/res/drawable/preview_1.png)
+![images/populated_homepage_dropdown_menu](app/src/main/res/drawable/preview_2.png)
+![images/kopi_uncle_event](app/src/main/res/drawable/preview_3.png)
+![images/tasks_sticker](app/src/main/res/drawable/preview_4.png)
 
 #### Sample Collectibles
-![images/char_blursotong](https://github.com/andrehadianto/SG-Go-Hackomania2019/tree/master/app/src/main/res/drawable/blursotong.png)
-![images/char_kopiuncle](https://github.com/andrehadianto/SG-Go-Hackomania2019/tree/master/app/src/main/res/drawable/kopiuncle.png)
-![images/char_taxiuncle](https://github.com/andrehadianto/SG-Go-Hackomania2019/tree/master/app/src/main/res/drawable/taxiuncle.png)
+![images/char_blursotong](app/src/main/res/drawable/blursotong.png)
+![images/char_kopiuncle](app/src/main/res/drawable/kopiuncle.png)
+![images/char_taxiuncle](app/src/main/res/drawable/taxiuncle.png)
 <br/>
-![images/sitcker_angkukueh](https://github.com/andrehadianto/SG-Go-Hackomania2019/tree/master/app/src/main/res/drawable/sticker_angkukueh.png)
-![images/sitcker_icepops](https://github.com/andrehadianto/SG-Go-Hackomania2019/tree/master/app/src/main/res/drawable/sticker_icepops.png)
-![images/sitcker_minjiangkueh](https://github.com/andrehadianto/SG-Go-Hackomania2019/tree/master/app/src/main/res/drawable/sticker_minjiangkueh.png)
-![images/sitcker_rabbitsweet](https://github.com/andrehadianto/SG-Go-Hackomania2019/tree/master/app/src/main/res/drawable/sticker_rabbitsweet.png)
-![images/sitcker_stones](https://github.com/andrehadianto/SG-Go-Hackomania2019/tree/master/app/src/main/res/drawable/sticker_stones.png)
+![images/sitcker_angkukueh](app/src/main/res/drawable/sticker_angkukueh.png)
+![images/sitcker_icepops](app/src/main/res/drawable/sticker_icepops.png)
+![images/sitcker_minjiangkueh](app/src/main/res/drawable/sticker_minjiangkueh.png)
+![images/sitcker_rabbitsweet](app/src/main/res/drawable/sticker_rabbitsweet.png)
+![images/sitcker_stones](app/src/main/res/drawable/sticker_stones.png)
 
 ### Features
 * Cute handdrawn assets and characters
