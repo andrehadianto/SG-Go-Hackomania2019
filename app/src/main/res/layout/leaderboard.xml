@@ -29,7 +29,8 @@
             android:layout_marginBottom="15dp"
             android:fontFamily="casual"
             android:gravity="center"
-            android:text="Leaderboard"
+            android:text="LEADERBOARD"
+            android:textStyle="bold"
             android:textSize="25dp" />
 
         <android.support.constraint.ConstraintLayout
@@ -45,6 +46,7 @@
                 android:fontFamily="casual"
                 android:text="2nd"
                 android:textSize="40dp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/profile_img"
                 app:layout_constraintStart_toStartOf="parent"
@@ -68,6 +70,7 @@
                 android:fontFamily="casual"
                 android:text="85pts"
                 android:textSize="40dp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/profile_img"
