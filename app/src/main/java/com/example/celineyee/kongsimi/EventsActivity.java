@@ -29,9 +29,9 @@ public class EventsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_events);
 
         eventsList = new ArrayList<>();
-        eventsList.add(new Event("Daily Event", date2, "", "Paiseh, I super blur sotong one.", charBlurSotong));
-        eventsList.add(new Event("Weekly Event", date2, dateweek, "Ah bang, lim kopi ai mai?", charKopiUncle));
-        eventsList.add(new Event("Hackomania", date1, date2, "Girl today so chio, going paktor ah?", charTaxiUncle));
+        eventsList.add(new Event(1,"Daily Event", date2, "", "Paiseh, I super blur sotong one.", charBlurSotong));
+        eventsList.add(new Event(2,"Weekly Event", date2, dateweek, "Ah bang, lim kopi ai mai?", charKopiUncle));
+        eventsList.add(new Event(3,"Hackomania", date1, date2, "Girl today so chio, going paktor ah?", charTaxiUncle));
 
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.events_recyclerview);
         Events_RecyclerViewAdapter recyclerViewAdapter = new Events_RecyclerViewAdapter(this, eventsList);

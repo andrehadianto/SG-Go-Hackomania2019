@@ -1,24 +1,47 @@
-# CakapTalk ![](app/src/main/res/mipmap-hdpi/logo64.png)
-
-### Hackomania 2019 Submission - AI Challenge
+## Hackomania 2019 Submission - AI Challenge
+# CakapTalk
 ---
-## Team Members
-* Andre Hadianto Lesmana
-* Nikos Chan Wai
-* Tan Jia Yi Claire
-* Tay Tzu Shieh
-* Yee Celine
+Andre Hadianto Lesmana | Nikos Chan Wai | Tan Jia Qi Claire | Tay Tzu Shieh | Yee Celine
 
-## Overview
-CakapTalk is a AndroidApp Studio-based game created to obtain training data on Singapore's Singlish. Most assets and characters are handdrawn and manipulated using AdobeIllustrator Draw app on iPad and Adobe Photoshop. 
+### Problem
+Singapore authorities and organisations are attempting to develop a speed-to-text model using
+Singlish speech. However, the dataset of transcribe Singlish is very limited and hiring workers to 
+transcribe manually is very expensive. CakapTalk aims to gamify the process of crowdsourcing to 
+gamify the process of crowdsourcing to facilitate the collection of both Singlish speech and the 
+corresponding transcribed data.
 
-## What is it?
-CakapTalk aims to collect data of different Singlish phrases. Players can record their own voices based on the pre-made phrases in the game that will be provided in two main categories: event and non-event. Event phrases came daily, weekly, and holiday-dependant. Non-event phrases are pre-loaded phrases that can be played whenever wherever.
+### CakapTalk
+CakapTalk is a AndroidApp Studio-based game, most of the assets and characters were handdrawn using 
+Adobe Photoshop and AdobeIllustrator Draw during the 24-hour period of the hackathon. Players can 
+record their voices following the Singlish phrases in text available in the game. Upon completing 
+certain tasks, players will unlock stickers and characters. There are two avenues for collecting
+stickers - event and hidden. Event phrases will expire after a certain period (ie. after a day or 
+week or when the holiday ends) Hidden phrases will be uncovered by random.
+<br/>
+The game's main platform is mobile, making it very convenient to download and play the game at 
+anytime and anywhere. It is also a casual Idle game where players can play at their own pace. 
+However, players will be incentivised by the cute stickers and the drive to complete the collection.
 
-The game was inspired by many modern popular apps namely: Tiktok, neko atsume, and many more. It follows the genre of Idle games where players are not expected to stay around their phone for a long period of time. The incentives of the game come from the feeling of satisfaction that players experienced when completing a set of collection and also just from the cute and interactive characters of the game that live their own lives inside the game.
+### Preview
+![images/homepage](app/src/main/res/drawable/preview_1.png)
+![images/populated_homepage_dropdown_menu](app/src/main/res/drawable/preview_2.png)
+![images/kopi_uncle_event](app/src/main/res/drawable/preview_3.png)
+![images/tasks_sticker](app/src/main/res/drawable/preview_4.png)
 
-## Features
+#### Sample Collectibles
+![images/char_blursotong](app/src/main/res/drawable/blursotong.png)
+![images/char_kopiuncle](app/src/main/res/drawable/kopiuncle.png)
+![images/char_taxiuncle](app/src/main/res/drawable/taxiuncle.png)
+<br/>
+![images/sitcker_angkukueh](app/src/main/res/drawable/sticker_angkukueh.png)
+![images/sitcker_icepops](app/src/main/res/drawable/sticker_icepops.png)
+![images/sitcker_minjiangkueh](app/src/main/res/drawable/sticker_minjiangkueh.png)
+![images/sitcker_rabbitsweet](app/src/main/res/drawable/sticker_rabbitsweet.png)
+![images/sitcker_stones](app/src/main/res/drawable/sticker_stones.png)
+
+### Features
 * Cute handdrawn assets and characters
-* Leaderboard, compete with people around the world to give the most natural phrases.
-* Collect over 50 different characters and see them roaming around your very own HDB block on the homepage
-* Listen to other people's phrases and vote for the one you like the most!
+* Collect over 50 different characters and see them roaming around your very own HDB block on the 
+homepage
+* Listen to others' interpretation of the phrases and vote for the ones you like the most!
+* Leaderboard, compete with others to get bonus prizes
