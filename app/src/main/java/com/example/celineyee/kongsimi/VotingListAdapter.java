@@ -1,6 +1,8 @@
 package com.example.celineyee.kongsimi;
 
 import android.content.Context;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +20,15 @@ public class VotingListAdapter extends RecyclerView.Adapter<VotingListAdapter.Vi
 
     ImageButton upVoteButton;
 
+    ColorStateList myColorStateList = new ColorStateList(
+            new int[][]{
+                    new int[]{-android.R.attr.state_enabled}
+            },
+            new int[] {
+                    Color.RED
+            }
+    );
+
 
     public VotingListAdapter(Context mContext, List<VotingList> mData) {
         this.mContext = mContext;
@@ -33,13 +44,23 @@ public class VotingListAdapter extends RecyclerView.Adapter<VotingListAdapter.Vi
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(final ViewHolder holder, int position) {
         final VotingList votingList = mData.get(position);
 
         holder.textViewTitle.setText(votingList.getTitle());
         holder.textViewOwner.setText(votingList.getOwner());
         holder.textViewRating.setText(String.valueOf(votingList.getVotesNum()));
         holder.imageView.setImageDrawable(mContext.getResources().getDrawable(votingList.getImage()));
+        holder.upVoteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int rating = Integer.parseInt(String.valueOf(holder.textViewRating.getText()));
+                rating++;
+                holder.textViewRating.setText(String.valueOf(rating));
+                holder.upVoteButton.setBackgroundTintList(myColorStateList);
+                holder.upVoteButton.setEnabled(false);
+            }
+        });
 
     }
 
@@ -51,6 +72,7 @@ public class VotingListAdapter extends RecyclerView.Adapter<VotingListAdapter.Vi
     public static class ViewHolder extends RecyclerView.ViewHolder{
         ImageView imageView;
         TextView textViewTitle, textViewOwner, textViewRating;
+        ImageButton upVoteButton;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -58,6 +80,7 @@ public class VotingListAdapter extends RecyclerView.Adapter<VotingListAdapter.Vi
             textViewTitle = (TextView) itemView.findViewById(R.id.textViewTitle);
             textViewOwner = (TextView) itemView.findViewById(R.id.textViewOwner);
             textViewRating = (TextView) itemView.findViewById(R.id.textViewRating);
+            upVoteButton = itemView.findViewById(R.id.upVoteButton);
         }
     }
 }
