@@ -18,13 +18,13 @@
         android:gravity="center_vertical"
         android:weightSum="10">
 
-        <ImageView
+        <ImageButton
             android:id="@+id/imageView"
             android:layout_width="92dp"
             android:layout_height="92dp"
             android:layout_marginStart="10dp"
             android:layout_weight="2"
-            android:src="@drawable/ic_record_voice_over_black_24dp" />
+            android:background="@drawable/ic_record_voice_over_black_24dp" />
 
         <LinearLayout
             android:layout_width="wrap_content"

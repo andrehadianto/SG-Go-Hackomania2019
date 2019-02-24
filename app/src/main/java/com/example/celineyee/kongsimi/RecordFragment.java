@@ -28,7 +28,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
@@ -37,6 +36,7 @@ import java.io.IOException;
  * Use the {@link RecordFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
+
 public class RecordFragment extends DialogFragment {
 
     public static final String TAG = "RecordFragment";
@@ -262,7 +262,6 @@ public class RecordFragment extends DialogFragment {
         if (state != State.START) {
             throw new RuntimeException("Must be in start state to record");
         }
-
         recordFilePath = getAudioFilePath(getContext());
 
         mediaRecorder = new MediaRecorder();
